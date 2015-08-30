@@ -42,7 +42,6 @@ function htxt_theme_scripts() {
 add_action('wp_enqueue_scripts', 'htxt_theme_scripts');
 
 function htxt_nav_li_class( $classes, $item ) {
-  $classes = [];
   $classes[] = 'nav-item';
   return $classes;
 }
@@ -54,4 +53,45 @@ function htxt_nav_anchor_class( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'htxt_nav_anchor_class', 10, 3 );
 
-?>
+/* * * * * * * * * * * * * * *
+ * BS4 Utility Functions
+ * * * * * * * * * * * * * * */
+
+function bs4_get_posts_pagination( $args = '' ) {
+  global $wp_query;
+  $pagination = '';
+
+  if ( $GLOBALS['wp_query']->max_num_pages > 1 ) :
+
+    $defaults = [
+      'total'     => isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1,
+      'current'   => get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1,
+      'type'      => 'array',
+      'prev_text' => '&laquo;',
+      'next_text' => '&raquo;',
+    ];
+
+    $params = wp_parse_args( $args, $defaults );
+
+    $paginate = paginate_links( $params );
+
+    if( $paginate ) :
+      $pagination .= "<ul class='pagination'>";
+      foreach( $paginate as $page ) :
+        if( strpos( $page, 'current' ) ) :
+          $pagination .= "<li class='active'>$page</li>";
+        else :
+          $pagination .= "<li>$page</li>";
+        endif;
+      endforeach;
+      $pagination .= "</ul>";
+    endif;
+
+  endif;
+
+  return $pagination;
+}
+
+function bs4_the_posts_pagination( $args = '' ) {
+  echo bs4_get_posts_pagination( $args );
+}

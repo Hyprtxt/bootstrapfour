@@ -23,14 +23,22 @@ img {
   margin: 0.4rem auto 1.6rem auto;
 }
 .wp-caption {
-    max-width: 100%;
+  max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin: 0;
+  display: block;
+  margin: 0;
 }
 .wp-caption-text {
 
+}
+
+/* * * * * * * * * * * * * * *
+ * ???
+ * * * * * * * * * * * * * * */
+
+.post {
+  margin-bottom: 2rem;
 }
 
 nav.navbar {

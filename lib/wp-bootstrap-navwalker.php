@@ -12,28 +12,16 @@
 
 class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
-    /**
-     * @see Walker::start_lvl()
-     * @since 3.0.0
-     *
-     * @param string $output Passed by reference. Used to append additional content.
-     * @param int $depth Depth of page. Used for padding.
-     */
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
-        $output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
+        $output .= "\n$indent<div class=\"dropdown-menu\">\n";
     }
 
-    /**
-     * @see Walker::start_el()
-     * @since 3.0.0
-     *
-     * @param string $output Passed by reference. Used to append additional content.
-     * @param object $item Menu item data object.
-     * @param int $depth Depth of menu item. Used for padding.
-     * @param int $current_page Menu item ID.
-     * @param object $args
-     */
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {
+      $indent = str_repeat( "\t", $depth );
+      $output .= "$indent</div>\n";
+    }
+
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
@@ -67,16 +55,24 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
             if ( in_array( 'current-menu-item', $classes ) )
                 $class_names .= ' active';
+            if ( in_array( 'current-menu-ancestor', $classes ) )
+                $class_names .= ' active';
 
-            if ( $depth >= 1 )
-              $class_names = str_replace( 'nav-item', 'dropdown-item', $class_names );
+
+            // if ( $depth >= 1 )
+            //   $class_names = str_replace( 'nav-item', 'dropdown-item', $class_names );
 
             $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
             $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
             $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-            $output .= $indent . '<li' . $id . $value . $class_names .'>';
+            if ( $depth >= 1 ) :
+              // No <li> wrapper for dropdown children
+              // $output .= $indent . '<li' . $id . $value . $class_names .'>';
+            else :
+              $output .= $indent . '<li' . $id . $value . $class_names .'>';
+            endif;
 
             $atts = array();
             $atts['title']  = ! empty( $item->title )	? $item->title	: '';
@@ -94,6 +90,13 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
             }
 
             $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+
+            if ( $depth >= 1 ) :
+              $atts['class'] = 'dropdown-item';
+              if ( in_array( 'current-menu-item', $classes ) ) :
+                $atts['class'] .= ' active';
+              endif;
+            endif;
 
             $attributes = '';
             foreach ( $atts as $attr => $value ) {
@@ -123,6 +126,14 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
         }
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+      if( $depth === 0 ) :
+        $output .= "</li>\n";
+      else :
+        $output .= "\n";
+      endif;
     }
 
     /**
