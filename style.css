@@ -1,0 +1,38 @@
+/* * * * * * * * * * * * * * *
+ * WordPress Content Classes
+ * * * * * * * * * * * * * * */
+
+img {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin: 0.4rem 0 1.6rem 1.6rem;
+}
+.alignleft {
+  display: inline;
+  float: left;
+  margin: 0.4rem 1.6rem 1.6rem 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0.4rem auto 1.6rem auto;
+}
+.wp-caption {
+    max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 0;
+}
+.wp-caption-text {
+
+}
+
+nav.navbar {
+  margin-bottom: 2rem;
+}

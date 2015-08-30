@@ -1,28 +1,21 @@
+<?php
+$main_nav_options = [
+  'theme_location'    => 'main_menu',
+  'depth'             => 2,
+  'container'         => '',
+  'container_class'   => '',
+  'menu_class'        => 'nav navbar-nav',
+  'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+  'walker'            => new wp_bootstrap_navwalker()
+];
+?>
+
 <?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-
-    <nav class="navbar navbar-light navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1-collapse">
-                    <span class="sr-only"><?php _e('Toggle navigation','devdmbootstrap3'); ?></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div> -->
-
-            <?php
-            wp_nav_menu([
-                'theme_location'    => 'main_menu',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => '',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker()
-            ]);
-            ?>
-        </div>
-    </nav>
-
+  <nav class="navbar navbar-light bg-faded">
+    <div class="container">
+      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+      <?php wp_nav_menu( $main_nav_options ); ?>
+      <?php get_search_form( 'true' ); ?>
+    </div><!-- .container -->
+  </nav>
 <?php endif; ?>
