@@ -1,55 +1,47 @@
-<div class="row">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+		// Post thumbnail.
+		// twentyfifteen_post_thumbnail();
+	?>
 
-	<div class="col-sm-12">
+	<header class="entry-header">
+		<?php
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title display-1">', '</h1>' );
+			else :
+				the_title( sprintf( '<h2 class="entry-title display-1"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			endif;
+		?>
+	</header><!-- .entry-header -->
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php
-				// Post thumbnail.
-				// twentyfifteen_post_thumbnail();
-			?>
+	<div class="entry-content">
+		<?php
+			/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( 'Continue reading %s', 'twentyfifteen' ),
+				the_title( '<span class="screen-reader-text">', '</span>', false )
+			) );
 
-			<header class="entry-header">
-				<?php
-					if ( is_single() ) :
-						the_title( '<h1 class="entry-title display-1">', '</h1>' );
-					else :
-						the_title( sprintf( '<h2 class="entry-title display-1"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-					endif;
-				?>
-			</header><!-- .entry-header -->
+			wp_link_pages( array(
+				'before'      => '<ul class="pagination">',
+				'after'       => '</ul>',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+				// 'separator'   => '<span class="screen-reader-text">, </span>',
+			) );
 
-			<div class="entry-content">
-				<?php
-					/* translators: %s: Name of current post */
-					the_content( sprintf(
-						__( 'Continue reading %s', 'twentyfifteen' ),
-						the_title( '<span class="screen-reader-text">', '</span>', false )
-					) );
+		?>
+	</div><!-- .entry-content -->
 
-					wp_link_pages( array(
-						'before'      => '<ul class="pagination">',
-						'after'       => '</ul>',
-						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-						// 'separator'   => '<span class="screen-reader-text">, </span>',
-					) );
+	<?php
+		// Author bio.
+		if ( is_single() && get_the_author_meta( 'description' ) ) :
+			get_template_part( 'author-bio' );
+		endif;
+	?>
 
-				?>
-			</div><!-- .entry-content -->
+	<footer class="entry-footer">
+		<?php // twentyfifteen_entry_meta(); ?>
+		<?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer><!-- .entry-footer -->
 
-			<?php
-				// Author bio.
-				if ( is_single() && get_the_author_meta( 'description' ) ) :
-					get_template_part( 'author-bio' );
-				endif;
-			?>
-
-			<footer class="entry-footer">
-				<?php // twentyfifteen_entry_meta(); ?>
-				<?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
-			</footer><!-- .entry-footer -->
-
-		</article><!-- #post-## -->
-
-	</div><!-- .col -->
-
-</div><!-- .row -->
+</article><!-- #post-## -->

@@ -37,6 +37,10 @@ img {
  * ???
  * * * * * * * * * * * * * * */
 
+.widget {
+  margin-bottom: 2rem;
+}
+
 .post {
   margin-bottom: 2rem;
 }
