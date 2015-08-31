@@ -2,7 +2,7 @@
 
 <?php get_template_part( 'navigation', 'default' ); ?>
 
-<div class="container">
+<div class="container main-container">
   <div class="row">
     <div class="col-sm-9">
 <?php
@@ -20,6 +20,6 @@
       <?php dynamic_sidebar( 'Right Sidebar' ); ?>
     </div><!-- .col -->
   </div><!-- .row -->
-</div><!-- .container -->
+</div><!-- .container.main-container -->
 
 <?php get_footer(); ?>

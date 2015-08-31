@@ -33,8 +33,9 @@ I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootst
 
 ## Copyrights and License Information for theme resources
 
-i) HyprtxtBS4 uses elements from the Twitter Bootstrap Framework, which is under The MIT License (MIT).
-ii) HyprtxtBS4 uses a modified version of Edward McIntyre’s wp_boot_strap_navwalker https://github.com/twittem/wp-bootstrap-navwalker GPL v3.
-iii) HyprtxtBS4 also uses components from DevDmBootstrap3 and TwentyFifteen themes, both have been released under the GPL license.
+* HyprtxtBS4 uses elements from the Twitter Bootstrap Framework, which is under The MIT License (MIT).
+* HyprtxtBS4 uses Font Awesome which is under The MIT License (MIT).
+* HyprtxtBS4 uses a modified version of Edward McIntyre’s wp_boot_strap_navwalker https://github.com/twittem/wp-bootstrap-navwalker GPL v3.
+* HyprtxtBS4 also uses modified components from the DevDmBootstrap3 and TwentyFifteen themes, both have been released under the GPL license.
 
 Everything else used in this theme (including the screenshot.png) has been created by me (Taylor Young), especially for the HyprtxtBS4 theme and is distributed under GPL v3 license.
