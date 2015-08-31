@@ -1,3 +1,24 @@
+/*
+Theme Name: Bootstrap Four
+Theme URI: http://bootstrapfour.hyprtxt.com/
+Author: Taylor Young
+Author URI: http://hyprtxt.com/
+Description: A versatile and responsive Bootstrap WordPress starter theme FOR DEVELOPERS based on Alpha Twitter Bootstrap 4.
+Version: 0.1.0
+License: GNU General Public License v3+
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu, editor-style, featured-images
+Text Domain: bs4
+
+bootstrapfour WordPress Theme, Copyright 2015 Taylor Young.
+bootstrapfour is distributed under the terms of the GNU GPL v3.
+*/
+
+/* The bootstrap.css file is auto-enqueued in functions.php */
+
+/* YOU SHOULD BE MAKING A CHILD THEME. Don't make me be the bad guy and erase all your hard work with a theme update. I don't want to destroy your world. A child theme template is in the works, watch the GitHub repo (https://github.com/Hyprtxt/bootstrapfour) to keep up with developments */
+
+
 /* * * * * * * * * * * * * * *
  * WordPress Content Classes
  * * * * * * * * * * * * * * */
@@ -7,6 +28,14 @@ img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
 }
 .alignright {
   display: inline;
@@ -32,9 +61,28 @@ img {
 .wp-caption-text {
 
 }
-
+.sticky {
+  background: #f7f7f9;
+  padding: 1rem;
+}
+.bypostauthor {
+  background: #f7f7f9;
+  padding: 0.5rem;
+}
+.gallery-caption {
+  font-weight: bold;
+}
+/* Text meant only for screen readers */
+.says,
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
 /* * * * * * * * * * * * * * *
- * ???
+ * ??? profit
  * * * * * * * * * * * * * * */
 
 .widget {

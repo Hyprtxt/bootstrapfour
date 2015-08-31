@@ -9,9 +9,22 @@ I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootst
 * Pagination
 * Menu Walker
 * Core Bootstrap4
+* Custom Comments form
+* FontAwesome
+
+## Needed to get into Theme Directory
+
+* Featured Image Support
+* Sticky Post Support
+* Gallery Support
+* Post Meta
+* Gravatars
+* Author Comments?
 
 ## Future Plans
 
+* Favicon Support
+* Theme Options Page + Customizer
 * SASS Support
 * Stater Child Theme
 * Sidebar + Widget Support
