@@ -57,7 +57,7 @@ add_action( 'after_setup_theme', 'bs4_setup' );
 if ( ! function_exists( 'bs4_theme_styles' ) ) :
   function bs4_theme_styles() {
     global $bs_version;
-    wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/fontawesome.min.css', [], '4.4.0' );
+    wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', [], '4.4.0' );
     wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], $bs_version );
     wp_register_style( 'styles', get_stylesheet_uri(), ['bootstrap'], '1' );
     wp_enqueue_style( 'font-awesome' );
