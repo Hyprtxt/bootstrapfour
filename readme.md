@@ -2,7 +2,7 @@
 
 This project is still very much in it's infancy. Bootstrap 4 is still on it's first alpha preview, but that shouldn't stop us from developing an awesome BS4 theme for WordPress developers.
 
-I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootstrap3](https://github.com/dannymachal/DevDmBootstrap3). I am combining the best of DevDmBootstrap3 with things good parts of the [twentyfifteen] WordPress default theme.
+I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootstrap3](https://github.com/dannymachal/DevDmBootstrap3). I am combining the best of DevDmBootstrap3 with the good parts of the [twentyfifteen] WordPress default theme.
 
 ## Features (So Far)
 
@@ -10,7 +10,8 @@ I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootst
 * Menu Walker
 * Core Bootstrap4
 * Custom Comments form
-* FontAwesome
+* Font Awesome
+* Favicon Support
 
 ## Needed to get into Theme Directory
 
@@ -23,13 +24,11 @@ I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootst
 
 ## Future Plans
 
-* Favicon Support
 * Theme Options Page + Customizer
 * SASS Support
 * Stater Child Theme
 * Sidebar + Widget Support
 * Much More!
-
 
 ## Copyrights and License Information for theme resources
 

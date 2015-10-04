@@ -4,7 +4,7 @@
 
 <div class="container main-container">
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-lg-9">
 <?php
   if ( have_posts() ) :
     while ( have_posts() ) : the_post();
@@ -16,7 +16,7 @@
   endif;
 ?>
     </div><!-- .col -->
-    <div class='col-sm-3'>
+    <div class='col-lg-3'>
       <?php dynamic_sidebar( 'Right Sidebar' ); ?>
     </div><!-- .col -->
   </div><!-- .row -->
