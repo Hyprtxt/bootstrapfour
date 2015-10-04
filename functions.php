@@ -78,14 +78,14 @@ add_action('wp_enqueue_scripts', 'bs4_theme_scripts');
 
 
 function bs4_nav_li_class( $classes, $item ) {
-  $classes[] = 'nav-item';
+  $classes[] .= ' nav-item';
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'bs4_nav_li_class', 10, 2 );
 
 
 function bs4_nav_anchor_class( $atts, $item, $args ) {
-  $atts['class'] = 'nav-link';
+  $atts['class'] .= ' nav-link';
   return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'bs4_nav_anchor_class', 10, 3 );

@@ -6,7 +6,7 @@
 
   <header class="entry-header">
     <?php
-      if ( is_single() ) :
+      if ( is_singular() ) :
         the_title( '<h1 class="entry-title display-1">', '</h1>' );
       else :
         the_title( sprintf( '<h2 class="entry-title display-1"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
