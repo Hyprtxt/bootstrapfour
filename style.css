@@ -4,17 +4,16 @@ Theme URI: http://bootstrapfour.hyprtxt.com/
 Author: Taylor Young
 Author URI: http://hyprtxt.com/
 Description: A versatile and responsive Bootstrap WordPress starter theme FOR DEVELOPERS based on Alpha Twitter Bootstrap 4.
-Version: 0.1.0
-License: GNU General Public License v3+
+Version: 0.2.0
+License: MIT
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: one-column, right-sidebar, responsive-layout, fluid-layout, custom-menu, site-icon
 Text Domain: bootstrap-four
 
 bootstrapfour WordPress Theme, Copyright 2015 Taylor Young.
-bootstrapfour is distributed under the terms of the GNU GPL v3.
 */
 
-/* The bootstrap.css file is auto-enqueued in functions.php */
+/* The bootstrap.css file is auto-enqueued in functions.php, also font-awesome */
 
 /* YOU SHOULD BE MAKING A CHILD THEME. Don't make me be the bad guy and erase all your hard work with a theme update. I don't want to destroy your world. A child theme template is in the works, watch the GitHub repo (https://github.com/Hyprtxt/bootstrapfour) to keep up with developments */
 
