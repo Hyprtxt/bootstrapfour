@@ -15,6 +15,13 @@ $main_nav_options = array(
     <div class="container">
       <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
       <?php wp_nav_menu( $main_nav_options ); ?>
+      <?php
+      $tagline = esc_attr( get_bloginfo( 'description' ) );
+      if ( $tagline ) :
+      ?>
+        <div class="clearfix"></div>
+        <span><?php echo $tagline; ?></span>
+      <?php endif; ?>
     </div><!-- .container -->
   </nav>
 <?php endif; ?>
