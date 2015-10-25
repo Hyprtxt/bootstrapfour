@@ -16,7 +16,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-class wp_bootstrap_navwalker extends Walker_Nav_Menu {
+class bootstrap_four_wp_navwalker extends Walker_Nav_Menu {
 
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );

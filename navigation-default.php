@@ -1,13 +1,13 @@
 <?php
-$main_nav_options = [
+$main_nav_options = array(
   'theme_location'    => 'main_menu',
   'depth'             => 2,
   'container'         => '',
   'container_class'   => '',
   'menu_class'        => 'nav navbar-nav',
-  'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-  'walker'            => new wp_bootstrap_navwalker()
-];
+  'fallback_cb'       => 'bootstrap_four_wp_navwalker::fallback',
+  'walker'            => new bootstrap_four_wp_navwalker()
+);
 ?>
 
 <?php if ( has_nav_menu( 'main_menu' ) ) : ?>

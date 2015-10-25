@@ -4,6 +4,8 @@ This is a starter WordPress theme for DEVELOPERS using Alpha Twitter Bootstrap 4
 
 DevDmBootstrap3 was a great theme for WordPress developers. This theme aims to be the Bootstrap 4 counterpart to DevDM's excellent work.
 
+This version conforms exactly to WordPress standards, you can find a slightly more opinionated version at http://github.com/hyprtxt/bootstrapfour
+
 ### Demo
 
 http://bootstrapfour.hyprtxt.com

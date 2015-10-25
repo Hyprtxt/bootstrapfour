@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <?php
     // Post thumbnail.
-    // bs4_post_thumbnail();
+    // the_post_thumbnail();
   ?>
 
   <header class="entry-header">
@@ -18,7 +18,7 @@
     <?php
       /* translators: %s: Name of current post */
       the_content( sprintf(
-        __( 'Continue reading %s', 'bs4' ),
+        __( 'Continue reading %s', 'bootstrap-four' ),
         the_title( '<span class="screen-reader-text">', '</span>', false )
       ) );
 
@@ -30,17 +30,17 @@
 ?>
         <div class="clearfix"></div>
         <p class="text-right">
-            <a class="btn btn-primary" href="<?php the_permalink(); ?>#comments"><?php comments_number( __( 'Leave a Comment', 'bs4' ), __( 'One Comment', 'bs4' ), '%' . __( ' Comments', 'bs4' ) );?> <span class="fa fa-comments"></span></a>
+            <a class="btn btn-primary" href="<?php the_permalink(); ?>#comments"><?php comments_number( __( 'Leave a Comment', 'bootstrap-four' ), __( 'One Comment', 'bootstrap-four' ), '%' . __( ' Comments', 'bootstrap-four' ) );?> <span class="fa fa-comments"></span></a>
         </p>
 <?php
       endif;
 
-      wp_link_pages([
+      wp_link_pages( array(
         'before'      => '<ul class="pagination">',
         'after'       => '</ul>',
-        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'bs4' ) . ' </span>%',
+        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'bootstrap-four' ) . ' </span>%',
         'separator'   => '<span class="screen-reader-text">, </span>',
-      ]);
+      ) );
 
     ?>
   </div><!-- .entry-content -->
@@ -53,8 +53,7 @@
   ?>
 
   <footer class="entry-footer">
-    <?php // bs4_entry_meta(); ?>
-    <?php edit_post_link( __( 'Edit', 'bs4' ), '<span class="edit-link">', '</span>' ); ?>
+    <?php edit_post_link( __( 'Edit', 'bootstrap-four' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

@@ -10,9 +10,9 @@
     while ( have_posts() ) : the_post();
       get_template_part( 'content', get_post_format() );
     endwhile;
-      bs4_the_posts_pagination();
+      bootstrap_four_the_posts_pagination();
   else :
-    ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'bs4' ); ?></p><?php
+    ?><p><?php _e( 'Sorry, no posts matched your criteria.', 'bootstrap-four' ); ?></p><?php
   endif;
 ?>
     </div><!-- .col -->
