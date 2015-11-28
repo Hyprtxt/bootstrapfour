@@ -11,6 +11,7 @@ $main_nav_options = array(
 ?>
 
 <?php if ( has_nav_menu( 'main_menu' ) ) : ?>
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
   <nav class="navbar navbar-light bg-faded">
     <div class="container">
       <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
