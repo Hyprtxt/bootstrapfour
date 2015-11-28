@@ -2,7 +2,7 @@
 
 <?php get_template_part( 'navigation', 'default' ); ?>
 
-<div class="container main-container">
+<div id="content" class="container main-container">
   <div class="row">
     <div class="col-lg-9">
 <?php
