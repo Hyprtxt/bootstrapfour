@@ -1,5 +1,7 @@
 # Bootstrap 4 for WordPress
 
+Enjoy this theme? [Leave me a Review on Wordpress.org](https://wordpress.org/support/view/theme-reviews/bootstrap-four#postform)
+
 This project is still very much in it's infancy. Bootstrap 4 is still on it's first alpha preview, but that shouldn't stop us from developing an awesome BS4 theme for WordPress developers.
 
 I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootstrap3](https://github.com/dannymachal/DevDmBootstrap3). I am combining the best of DevDmBootstrap3 with the good parts of the [twentyfifteen] WordPress default theme.
