@@ -39,4 +39,4 @@ I was inspired by the awesome work of [DevDM](http://devdm.com/) on [DevDmBootst
 * HyprtxtBS4 uses a modified version of Edward McIntyre’s wp_boot_strap_navwalker https://github.com/twittem/wp-bootstrap-navwalker GPL v3.
 * HyprtxtBS4 also uses modified components from the DevDmBootstrap3 and TwentyFifteen themes, both have been released under the GPL license.
 
-Everything else used in this theme (including the screenshot.png) has been created by me (Taylor Young), especially for the HyprtxtBS4 theme and is distributed under MIT license.
+Everything else used in this theme (including the screenshot.png) has been created by me (Taylor Young), especially for the HyprtxtBS4 theme and is distributed under the terms of the MIT license.
