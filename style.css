@@ -106,3 +106,10 @@ body > nav.navbar {
 nav.navbar {
   margin-bottom: 2rem;
 }
+
+/* .navbar .navbar-toggleable-xs {
+  display: none;
+}
+.navbar .navbar-toggleable-xs.show {
+  display: block;
+} */
