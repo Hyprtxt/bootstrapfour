@@ -1,6 +1,6 @@
 <?php
 
-include_once 'lib/bootstrap-four-wp-navwalker.php';
+require_once 'lib/bootstrap-four-wp-navwalker.php';
 
 global $bootstrap_four_version;
 
@@ -46,7 +46,7 @@ if ( ! function_exists( 'bootstrap_four_setup' ) ) :
 
     register_nav_menus( array(
       'main_menu' => __( 'Main Menu', 'bootstrap-four' ),
-      // 'footer_menu' => 'Footer Menu'
+      // 'footer_menu' => __( 'Footer Menu', 'bootstrap-four' ),
     ) );
 
     add_editor_style( 'css/bootstrap.min.css' );
@@ -90,7 +90,7 @@ add_filter( 'nav_menu_link_attributes', 'bootstrap_four_nav_anchor_class', 10, 3
 
 
 function bootstrap_four_comment_form_before() {
-  echo '<div class="card"><div class="card-block">';
+  echo '<div class="card"><div class="card-body">';
 }
 add_action( 'comment_form_before', 'bootstrap_four_comment_form_before', 10, 5 );
 
@@ -125,7 +125,7 @@ add_filter( 'comment_form_defaults', 'bootstrap_four_comment_form', 10, 5 );
 
 
 function bootstrap_four_comment_form_after() {
-  echo '</div><!-- .card-block --></div><!-- .card -->';
+  echo '</div><!-- .card-body --></div><!-- .card -->';
 }
 add_action( 'comment_form_after', 'bootstrap_four_comment_form_after', 10, 5 );
 
